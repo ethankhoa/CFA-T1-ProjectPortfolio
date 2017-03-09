@@ -1,0 +1,88 @@
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-transparent {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-brand {
+  color: $cb-blue;
+}
+
+.navbar-top-icon {
+  color: $cb-text;
+  font-size: 2em;
+}
+
+.navbar-bottom-icon-only {
+  font-size: 2em;
+  padding-top: 50px;
+}
+
+.navbar-bottom-icon {
+  font-size: 2em;
+  padding-bottom: 15px;
+}
+.navbar-bottom-icon-section {
+  font-size: 2em;
+  padding-top: 15px;
+}
+
+.navbar-bottom-icon-hidden {
+  font-size: 2em;
+  padding-bottom: 15px;
+  visibility: hidden;
+}
+
+.navbar-active {
+  color: $cb-orange;
+}
+
+.navbar-top-icon-arrow {
+  color: $cb-text;
+  font-size: 1.5em;
+}
+
+.navbar-bottom-font {
+  font-size: 1.5em;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: $cb-back2;
+  color: $cb-orange;
+}
+
+.no_padding {
+  padding: 0;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333333;
+    white-space: nowrap;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:active {
+    color: $cb-orange;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: $cb-text;
+}

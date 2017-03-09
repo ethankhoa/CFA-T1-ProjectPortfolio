@@ -1,0 +1,12 @@
+.projects-container {
+
+}
+
+<div class="flex-container">
+  <% @trump_images.each do |name, value| %>
+    <div class="flex-item">
+      <p><%= name %></p>
+      <img src="<%= value %>" class="flex-image">
+    </div>
+      <% end %>
+</div>

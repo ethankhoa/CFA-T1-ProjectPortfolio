@@ -1,0 +1,22 @@
+<div class="flex-container">
+
+<h1>PROJECTS?</h1>
+
+<p>YOU AIN'T GOT NONE HERE MAN!</p>
+
+</div>
+
+
+<div class="flex-container">
+  <% @trump_images.each do |name, value| %>
+    <div class="flex-item">
+      <p><%= name %></p>
+      <img src="<%= value %>" class="flex-image">
+    </div>
+      <% end %>
+</div>
+
+
+<% content_for :navbar do %>
+     <%= render 'partials/nav_projects' %>
+<% end %>

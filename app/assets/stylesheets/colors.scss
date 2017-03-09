@@ -1,0 +1,51 @@
+// Setting color palette variables
+$cb-light-gray: #969896;    // just plain light gray
+$cb-cyan: #8abeb7;          // just plain cyan
+$cb-back1: #000000;         // absolute black
+$cb-back2: #2D2D2D;
+$cb-back3: #111111;         // changed from 242424 to 111111
+$cb-comment: #A300A3;       // changed from 717171 to A300A3
+$cb-code: #8996A8;
+$cb-gray: #A8A8A8;
+$cb-text: #D3D3D3;
+$cb-select: #4D5660;
+$cb-orange: #E69F00;        // changed from FFA040 to E69F00
+$cb-blue: #00904E;          // changed from 8AC6F2 to 00904E
+$cb-green: #009E73;         // changed from 95E454 to 009E73
+$cb-yellow: #F0E442;        // changed from CAE682 to F0E442
+$cb-red: #D55E00;           // changed from E5786D to D55E00
+$cb-error: #E62424;
+$cb-magenta: #D33682;
+$cb-violet: #CC79A7;        // changed from 6C71C4 to CC79A7
+
+
+
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+// General colors
+@syntax-text-color: @cb-text;
+@syntax-cursor-color: @cb-orange;
+@syntax-selection-color: @cb-select;
+@syntax-background-color: @cb-back1;
+
+// Guide colors
+@syntax-wrap-guide-color: @cb-back2;
+@syntax-indent-guide-color: @cb-back2;
+@syntax-invisible-character-color: @cb-back2;
+
+// For find and replace markers
+@syntax-result-marker-color: @cb-text;
+@syntax-result-marker-color-selected: @cb-orange;
+
+// Gutter colors
+@syntax-gutter-text-color: @cb-gray;
+@syntax-gutter-text-color-selected: @cb-text;
+@syntax-gutter-background-color: @cb-back1;
+@syntax-gutter-background-color-selected: @cb-back3;
+
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed: @cb-blue;    // @blue;
+@syntax-color-added: @cb-green;     // @green;
+@syntax-color-modified: @cb-orange; // @orange;
+@syntax-color-removed: @cb-red;     // @red;
