@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-bottom navbar-transparent">
-      <div class="container-fluid">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -11,10 +11,9 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="hvr-backward"><i class="fa fa-arrow-left navbar-bottom-icon-hidden" aria-hidden="true"></i></li>
-            <li class="navbar-bottom-font hvr-float hvr-underline-reveal"><a href="/pages/blog"><p><i class="fa fa-rss navbar-bottom-icon hvr-pulse-grow" aria-hidden="true"></i></p>Blog</a></li>
-            <li class="navbar-bottom-font hvr-float hvr-underline-reveal"><a href="/pages/about"><p><i class="fa fa-rebel navbar-bottom-icon hvr-wobble-horizontal" aria-hidden="true"></i></p>About</a></li>
-            <li class="navbar-bottom-font hvr-float hvr-underline-reveal"><a href="/pages/contact"><p><i class="fa fa-paper-plane navbar-bottom-icon hvr-wobble-to-top-right" aria-hidden="true"></i></p>Contact</a></li>
-            <li class="navbar-bottom-font hvr-float hvr-underline-reveal"><a href="https://www.github.com/ethankhoa" target="_blank"><p><i class="fa  fa-github navbar-bottom-icon hvr-wobble-horizontal" aria-hidden="true"></i></p>GitHub</a></li>
+            <% @nav_array.each do |nav| %>
+            <li class="navbar-bottom-font hvr-float hvr-underline-reveal"><a href='<%= nav[:path] %>'><p><i class="fa <%= nav[:icon] %> navbar-bottom-icon <%= nav[:hover] %>" aria-hidden="true"></i></p><%= nav[:title] %></a></li>
+              <% end %>
             <li class="dropdown navbar-bottom-font hvr-float hvr-underline-reveal">
               <a href="/pages/projects" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><p><i class="fa fa-bug navbar-bottom-icon hvr-buzz-out" aria-hidden="true"></i></p><span>Projects</span></a>
               <ul class="dropdown-menu">

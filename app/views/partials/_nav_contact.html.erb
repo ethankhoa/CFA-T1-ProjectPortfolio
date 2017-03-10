@@ -11,10 +11,13 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="hvr-backward"><a href="#" onClick="history.go(-1);return true;"><i class="fa fa-arrow-left navbar-bottom-icon-only" aria-hidden="true"></i></a></li>
-            <li class="navbar-bottom-font hvr-float-section hvr-underline-reveal-section"><a href="/pages/blog">Blog<p><i class="fa fa-rss navbar-bottom-icon-section hvr-pulse-grow" aria-hidden="true"></i></p></a></li>
-            <li class="navbar-bottom-font hvr-float-section hvr-underline-reveal-section"><a href="/pages/about">About<p><i class="fa fa-rebel navbar-bottom-icon-section hvr-wobble-horizontal" aria-hidden="true"></i></p></a></li>
-            <li class="navbar-bottom-font hvr-float-section hvr-underline-reveal-section"><a href="/pages/contact"><span class="navbar-active">Contact</span><p><i class="fa fa-paper-plane navbar-bottom-icon-section hvr-wobble-to-top-right" aria-hidden="true"></i></p></a></li>
-            <li class="navbar-bottom-font hvr-float-section hvr-underline-reveal-section"><a href="https://www.github.com/ethankhoa" target="_blank">GitHub<p><i class="fa fa-github navbar-bottom-icon-section hvr-wobble-skew" aria-hidden="true"></i></p></a></li>
+            <% @nav_array.each do |nav| %>
+            <% Rails.cache.read("nav_array") %>
+            <li class="navbar-bottom-font hvr-float-section hvr-underline-reveal-section">
+              <a href="<%= nav[:path] %>">
+              <% if current_page?(nav[:path]) -%><span class="navbar-active"><%= nav[:title] %></span><% else -%><%= nav[:title] %><% end -%>
+              <p><i class="fa <%= nav[:icon] %> navbar-bottom-icon-section <%= nav[:hover] %>" aria-hidden="true"></i></p></a></li>
+              <% end %>
             <li class="dropdown navbar-bottom-font hvr-float-section hvr-underline-reveal-section">
               <a href="/pages/projects" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="hvr-wobble-horizontal">Projects</span><p><i class="fa fa-bug navbar-bottom-icon-section hvr-buzz-out" aria-hidden="true"></i></p></a>
               <ul class="dropdown-menu">

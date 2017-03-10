@@ -6,6 +6,11 @@
  @import "colors";
  @import "nav";
  @import "hover";
+ @import "projects";
+
+html {
+  height: 100vh;
+}
 
  body {
    background-color: $cb-back3;
@@ -14,10 +19,12 @@
   //  font-family: 'Menlo-Regular';
    font-family: 'Menlo', 'Consolas', monospace;
    font-size:14px;
-   line-height:1.75
+   line-height:1.75;
+   height: 100vh;
  }
 
  .titlepage {
+   margin-top: 100px;
    flex-grow: 1; }
    .titlepage .name {
      color: $cb-blue;

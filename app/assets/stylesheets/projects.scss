@@ -1,12 +1,81 @@
-.projects-container {
 
+ .flex-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   height: 75vh;
+ }
+
+.flex-item {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
 }
 
-<div class="flex-container">
-  <% @trump_images.each do |name, value| %>
-    <div class="flex-item">
-      <p><%= name %></p>
-      <img src="<%= value %>" class="flex-image">
-    </div>
-      <% end %>
-</div>
+.flex-image {
+  width: 100%;
+  height: 300px;
+}
+
+.flex-image-description {
+  position: absolute;
+  top: 0px;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  background-color: rgba(45, 45, 45, 0.95);
+  color: $cb-text;
+  visibility: none;
+  // -webkit-transition-duration: 0.5s;
+  // transition-duration: 0.5s;
+  // -webkit-transition: visibility opacity .5s ease;
+  // transition: visibility opacity .5s ease;
+  transition: .5s ease;
+  opacity: 0;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.box_project_title {
+  color: $cb-yellow;
+  font-size: 25px;
+}
+
+.box_project_title-overlay {
+  display: inline;
+  color: $cb-text;
+  font-size: 25px;
+  background-color: rgba(45, 45, 45, .75);
+  width: 100%;
+}
+
+.ruby_icon {
+  content: 'f219';
+  font-family: 'Font Awesome';
+  color: #ED213C;
+  font-size: 1em;
+}
+
+
+.flex-item:before, .flex-image-overlay {
+  content:"";
+  position: absolute;
+  top: 0px;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  background-color: rgba(45, 45, 45, .15);
+  color: $cb-back3;
+  // -webkit-transition-duration: 0.5s;
+  // transition-duration: 0.5s;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.flex-item:hover .flex-image-description {
+  visibility: visible;
+  opacity: 1;
+}

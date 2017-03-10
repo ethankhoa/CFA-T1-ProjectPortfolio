@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/projects'
   get 'pages/blog'
+  get 'pages/projects-ruby-atm-terminal'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
