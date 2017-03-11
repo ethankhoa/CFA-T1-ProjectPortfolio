@@ -9,7 +9,6 @@
   </head>
 
   <body>
-<div class="container">
 
 
     <%= render 'partials/topnav' %>
@@ -19,14 +18,15 @@
 
     <%= yield %>
 
+<div class="container">
 
     <% if content_for?(:navbar) %>
         <%= yield(:navbar) %>
     <% else %>
     <%= render 'partials/nav' %>
     <% end %>
-
   </div>
+
 
   </body>
 </html>
