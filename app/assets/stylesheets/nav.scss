@@ -3,6 +3,8 @@
     margin:0 auto;
     display: block;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
 }
 
 
@@ -22,7 +24,6 @@
 }
 
 .navbar-top-icon {
-  color: $cb-text;
   font-size: 2em;
 }
 
@@ -58,7 +59,7 @@
 }
 
 .navbar-bottom-font {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
@@ -73,7 +74,8 @@
 .navbar-nav > li {
     display: inline-block;
     float:none;
-
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
 }
 
 
@@ -111,5 +113,5 @@
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: $cb-text;
+    color: #ffffff;
 }

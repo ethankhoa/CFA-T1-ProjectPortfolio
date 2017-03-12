@@ -4,7 +4,7 @@
     <title>PortfolioApp</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application','http://fast.fonts.net/cssapi/d7ac101b-2d7c-4aa2-97f8-76f79025438f.css', 'https://fonts.googleapis.com/css?family=Inconsolata|Source+Sans+Pro', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application','http://fast.fonts.net/cssapi/d7ac101b-2d7c-4aa2-97f8-76f79025438f.css', 'https://fonts.googleapis.com/css?family=Inconsolata|Source+Sans+Pro|Merriweather:300,400,400i,700|Open+Sans:400,700', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -19,14 +19,10 @@
 
     <%= yield %>
 
-<div class="container">
 
-    <% if content_for?(:navbar) %>
-        <%= yield(:navbar) %>
-    <% else %>
-    <%= render 'partials/nav' %>
-    <% end %>
-  </div>
+  <footer class="footer">
+    <%= render 'partials/footer' %>
+    </footer>
 
 
   </body>

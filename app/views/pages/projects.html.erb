@@ -1,8 +1,29 @@
 <div class="container">
 
-<h1>PROJECTS?</h1>
+<h1><a href="/">/HOME</a><span class="orange-font">/PROJECTS?</span></h1>
+<div class="container">
 
-<p>YOU AIN'T GOT NONE HERE MAN!</p>
+<p class="projects-subhead">I'm currenly learning how to develop with Ruby, it's been an incredible journey. What can be done with some lines of code is extraordinary. I'm most looking forward to expanding my skills to make my code more useful to more people. </p>
+</div>
+
+<div class="flex-container">
+
+<div class="row">
+  <% @projects_array.each do |proj| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<%= proj[:project_image] %>" alt="...">
+      <div class="caption">
+        <h3><%= proj[:project_name] %></h3>
+        <p><%= proj[:description] %></p>
+        <p><a href="/pages/projects" class="btn btn-primary btn-block" role="button">View Project</a> <a href="#" class="btn btn-default btn-block" role="button">GitHub</a></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>
+
 
 <div class="flex-container">
   <div class="row">
@@ -11,30 +32,26 @@
 
     <div class="flex-item">
       <!-- <p><%= proj[:project_name] %></p> -->
+
       <p><img src="<%= proj[:project_image] %>" class="flex-image"></p>
-      <span class="flex-image-overlay">
-        <p class="box_project_title-overlay"><%= proj[:project_name] %></p>
-      </span>
-      <span class="flex-image-description">
+      <div class="flex-image-overlay">
+        <!-- <p class="box_project_title-overlay"><%= proj[:project_name] %></p> -->
+        <div class="box_project_description-overlay">
+        <p class="adelle-font uppercased"><%= proj[:project_name] %></p>
+        <p class="grey-text"><%= proj[:project_cat] %></p>
+      </div>
+      </div>
+      <div class="flex-image-description">
         <p class="box_project_title"><%= proj[:project_name] %></p>
         <p>Project Type: <%= proj[:project_cat] %></p>
         <p><%= proj[:description] %></p>
         <p><a href="<%= proj[:project_url] %>"
           <button type="button" class="btn btn-default btn-sm">Go to the project page</button></a></p>
         <p><button type="button" class="btn btn-default btn-sm">View on GitHub</button></p>
-      </span>
+      </div>
     </div>
   </div>
     <% end %>
   </div>
 
 </div>
-
-
-
-
-
-
-<% content_for :navbar do %>
-     <%= render 'partials/nav_projects' %>
-<% end %>

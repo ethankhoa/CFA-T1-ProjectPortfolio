@@ -1,26 +1,32 @@
 <nav class="navbar navbar-default navbar-transparent">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a href="#" class="navbar-brand">EK</a> </div>
+      <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">EK</a>
+    </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          <ul class="nav navbar-nav navbar-right">
-           <li><a href="/"><i class="fa fa-home navbar-top-icon hvr-bounce-in" aria-hidden="true"></i></a></li>
-           <!-- <li><a href="https://twitter.com/"><%= image_tag("icon_twitter", :alt => "twitter") %></a></li> -->
-           <li><a href="https://twitter.com/"><i class="fa fa-twitter navbar-top-icon hvr-bounce-in" aria-hidden="true"></i></a></li>
-           <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin navbar-top-icon hvr-bounce-in" aria-hidden="true"></i></a></li>
-           <li><a href="mailto:fake@email.com"><i class="fa fa-envelope navbar-top-icon hvr-bounce-in" aria-hidden="true"></i></a></li>
-           <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars navbar-top-icon-arrow hvr-hang" aria-hidden="true"></i></a>
+           <% @nav_array.each do |nav| %>
+           <% Rails.cache.read("nav_array") %>
+           <li class="navbar-bottom-font hvr-float-section hvr-underline-reveal-section">
+             <a href="<%= nav[:path] %>">
+            <p><i class="fa <%= nav[:icon] %> navbar-top-icon <%= nav[:hover] %>" aria-hidden="true"></i></p>
+             <% if current_page?(nav[:path]) -%><span class="navbar-active"><%= nav[:title] %></span><% else -%><%= nav[:title] %><% end -%></a></li>
+             <% end %>
+           <!-- <li class="dropdown navbar-bottom-font hvr-float-section hvr-underline-reveal-section">
+             <a href="/pages/projects" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="hvr-wobble-horizontal">Projects</span><p><i class="fa fa-bug navbar-bottom-icon-section hvr-buzz-out" aria-hidden="true"></i></p></a>
              <ul class="dropdown-menu">
-               <li><a href="/pages/blog">Blog</a></li>
-               <li><a href="/pages/about">About</a></li>
-               <li><a href="https://www.github.com/ethankhoa">GitHub</a></li>
-               <li><a href="/pages/contact">Contact</a></li>
-               <li><a href="/pages/projects">Projects</a></li>
+               <li class="dropdown-header">Project Category</li>
+               <li><a href="/pages/projects">Ruby</a></li>
+               <li><a href="/pages/projects">Web</a></li>
+               <li><a href="/pages/projects">Misc</a></li>
                <li role="separator" class="divider"></li>
-               <li><a href="http://www.theuselessweb.com/">Feeling Lucky?</a></li>
-             </ul>
-           </li>
+               <li><a href="/pages/projects">I WANT TO SEE ALL OF THEM!</a></li> -->
          </ul>
        </div>
      </div>

@@ -9,15 +9,26 @@
  @import "projects";
 
 html {
-  // height: 100vh;
+  position: relative;
+  min-height: 100%;
 }
 
-// options to remove hover actions for touch devices
-@media (hover:on-demand) {
-    // button:hover {
-    //     background-color: $cb-light-gray;
+.fancy-font {
+font-family: 'Merriweather', serif;
+}
 
-    }
+.adelle-font {
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
+.orange-font {
+  color: $cb-orange;
+}
+
+.uppercased {
+  text-transform: uppercase;
+}
 
 
 body {
@@ -29,8 +40,20 @@ body {
    font-size:14px;
    line-height:1.75;
   //  height: 100vh;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
  }
+
+ .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
 
  .titlepage {
    margin-top: 5%;
@@ -46,9 +69,22 @@ body {
      color: $cb-comment;
    }
 
-   h1, h2, h3 {
-     font-family: 'Menlo', monospace;
-     line-height: 1.3; margin:15px 15px; font-weight:400
+  //  h1, h2, h3 {
+  //    font-family: 'Menlo', monospace;
+  //    line-height: 1.3; margin:15px 15px; font-weight:400
+  //  }
+
+.right-indent {
+margin:15px 15px;
+}
+   .title-btn {
+     background-color: $cb-back3;
+     border: 1px solid #ffffff;
+     border-radius: 2px;
+
+   }
+   .title-btn:hover {
+     background-color: #ffffff;
    }
 
 .glyphicon {
