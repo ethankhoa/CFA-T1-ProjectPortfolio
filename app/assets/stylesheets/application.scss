@@ -12,7 +12,15 @@ html {
   // height: 100vh;
 }
 
- body {
+// options to remove hover actions for touch devices
+@media (hover:on-demand) {
+    // button:hover {
+    //     background-color: $cb-light-gray;
+
+    }
+
+
+body {
    background-color: $cb-back3;
   //  color: #c7eae5;
   color: $cb-text;
@@ -21,11 +29,11 @@ html {
    font-size:14px;
    line-height:1.75;
   //  height: 100vh;
-  padding-bottom: 70px; 
+  padding-bottom: 70px;
  }
 
  .titlepage {
-   margin-top: 100px;
+   margin-top: 5%;
    flex-grow: 1; }
    .titlepage .name {
      color: $cb-blue;

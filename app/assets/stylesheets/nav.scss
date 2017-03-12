@@ -46,6 +46,8 @@
   visibility: hidden;
 }
 
+
+
 .navbar-active {
   color: $cb-orange;
 }
@@ -72,6 +74,24 @@
     display: inline-block;
     float:none;
 
+}
+
+
+@media only screen and (max-width: 766px) {
+// .collapsing, .in {}
+// .collapsing ul li a, .in ul li a {}
+// .collapsing ul li, .in ul li {}
+
+.navbar-bottom-icon, .navbar-bottom-icon-section {
+  display: none !important;
+}
+
+
+.navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 10px;
+}
 }
 
 .dropdown-menu > li > a {
