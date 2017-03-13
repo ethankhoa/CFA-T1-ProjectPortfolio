@@ -6,6 +6,36 @@
 <p class="projects-subhead">I'm currenly learning how to develop with Ruby, it's been an incredible journey. What can be done with some lines of code is extraordinary. I'm most looking forward to expanding my skills to make my code more useful to more people. </p>
 </div>
 
+
+<div class="flex-container">
+  <div class="row">
+  <% @projects_array.each do |proj| %>
+  <div class="col-md-4">
+
+    <div class="flex-item">
+      <!-- <p><%= proj[:project_name] %></p> -->
+
+      <p><img src="<%= proj[:project_image] %>" class="flex-image"></p>
+      <div class="flex-image-overlay">
+        <!-- <p class="box_project_title-overlay"><%= proj[:project_name] %></p> -->
+        <div class="box_project_description-overlay">
+        <p class="adelle-font uppercased font-bigger"><%= proj[:project_name] %></p>
+        <p class="grey-text"><%= proj[:project_cat] %></p>
+      </div>
+      </div>
+      <div class="flex-image-description">
+        <p class="box_project_title"><%= proj[:project_name] %></p>
+        <p>Project Type: <%= proj[:project_cat] %></p>
+        <p><%= proj[:description] %></p>
+        <p><a href="<%= proj[:project_url] %>"
+          <button type="button" class="btn btn-default btn-sm">Go to the project page</button></a></p>
+        <p><button type="button" class="btn btn-default btn-sm">View on GitHub</button></p>
+      </div>
+    </div>
+  </div>
+    <% end %>
+  </div>
+
 <div class="flex-container">
 
 <div class="row">
@@ -24,34 +54,5 @@
 </div>
 </div>
 
-
-<div class="flex-container">
-  <div class="row">
-  <% @projects_array.each do |proj| %>
-  <div class="col-md-4">
-
-    <div class="flex-item">
-      <!-- <p><%= proj[:project_name] %></p> -->
-
-      <p><img src="<%= proj[:project_image] %>" class="flex-image"></p>
-      <div class="flex-image-overlay">
-        <!-- <p class="box_project_title-overlay"><%= proj[:project_name] %></p> -->
-        <div class="box_project_description-overlay">
-        <p class="adelle-font uppercased"><%= proj[:project_name] %></p>
-        <p class="grey-text"><%= proj[:project_cat] %></p>
-      </div>
-      </div>
-      <div class="flex-image-description">
-        <p class="box_project_title"><%= proj[:project_name] %></p>
-        <p>Project Type: <%= proj[:project_cat] %></p>
-        <p><%= proj[:description] %></p>
-        <p><a href="<%= proj[:project_url] %>"
-          <button type="button" class="btn btn-default btn-sm">Go to the project page</button></a></p>
-        <p><button type="button" class="btn btn-default btn-sm">View on GitHub</button></p>
-      </div>
-    </div>
-  </div>
-    <% end %>
-  </div>
 
 </div>
